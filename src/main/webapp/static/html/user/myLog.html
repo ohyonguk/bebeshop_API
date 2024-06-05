@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css//user/mylog.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="background">
+
+        <!-- 메뉴바 -->
+        <header>
+            <div class="headerbx">
+                <img src="/img/logo.png" alt="logo" width="100px" height="100px">
+
+                <!--------------------- 상단 아이디 및 아이콘이 들어가는 공간 --------------------->
+                <div class="menubx">
+                    <h6 class="shop"><a href="#">SHOP</a></h6>
+                    <input type="button" value="회원" class="pos">
+                    <h6><a href="#">HONGGILDONG님</a></h4>
+                        <h6><a href="#">이벤트</a></h6>
+                        <h6><a href="#">게시판</a></h6>
+                        <h6><a href="#">로그아웃</a></h6>
+                        <img src="/img/bell.png" alt="bell" width="20px" height="20px" class="bell">
+                        <a href="#"><img src="/img/cart.png" alt="cart" width="20px" height="20px"></a>
+                        <img src="/img/search.png" alt="search" width="20px" height="20px" class="btn">
+                </div>
+                <form action="" method="POST">
+                    <div class="search"><input type="text"><i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </form>
+            </div>
+        </header>
+
+        <div class="main">
+            <div class="aside">
+            </div>
+
+            <div class="mainbox">
+                <div class="log">
+                    <h4>나의 활동</h4>
+                    <hr style="border: 2px black solid;">
+                    <input type="date" id="log_date" name="log_date" value="2021-06-30">
+                    <select id="select" name="select">
+                        <option value="select">선택사항</option>
+                        <option value="question">문의</option>
+                        <option value="review">리뷰</option>
+                    </select>
+                    <input id="btn" type="button" value="검색">
+                    <hr style="border: 1px #cfcfcf solid;">
+                </div>
+                <div class="log_table">
+                    <table>
+                        <tr>
+                            <th id="table_date">작성일자</th>
+                            <th id="table_select">선택사항</th>
+                            <th id="table_content">작성내용</th>
+                        </tr>
+                        <tr>
+                            <td>2021.06.01</td>
+                            <td>문의</td>
+                            <td><a href="#">어려워요</a></td>
+                        </tr>
+                        <tr>
+                            <td>2021.05.03</td>
+                            <td>리뷰</td>
+                            <td>너무 어려워요</td>
+                        </tr>
+                        <tr>
+                            <td>2021.06.01</td>
+                            <td>문의</td>
+                            <td>어려워요</td>
+                        </tr>
+                        <tr>
+                            <td>2021.05.03</td>
+                            <td>리뷰</td>
+                            <td>너무 어려워요</td>
+                        </tr>
+                        <tr>
+                            <td>2021.06.01</td>
+                            <td>문의</td>
+                            <td>어려워요</td>
+                        </tr>
+                        <tr>
+                            <td>2021.05.03</td>
+                            <td>리뷰</td>
+                            <td>너무 어려워요</td>
+                        </tr>
+                        <tr>
+                            <td>2021.06.01</td>
+                            <td>문의</td>
+                            <td>어려워요</td>
+                        </tr>
+                        <tr>
+                            <td>2021.05.03</td>
+                            <td>리뷰</td>
+                            <td>너무 어려워요</td>
+                        </tr>
+                        <tr>
+                            <td>2021.05.03</td>
+                            <td>리뷰</td>
+                            <td>너무 어려워요</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.aside').load("user_aside.html");
+    });
+</script>
+<script type="text/javascript" src="/js/search.js"></script>
+
+</html>

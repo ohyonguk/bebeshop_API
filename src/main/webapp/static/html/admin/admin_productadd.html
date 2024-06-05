@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin/admin_productadd.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="background">
+
+        <!-- 메뉴바 -->
+        <header>
+            <div class="headerbx">
+                <img src="/img/logo.png" alt="logo" width="100px" height="100px">
+
+                <!-- 상단 아이디 왜 아이콘이 들어가는 공간 -->
+                <div class="menubx">
+
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="aside">
+
+            </div>
+            <div class="mainbox">
+                <div class="purchase">
+                    <h4>상품 추가</h4>
+                    <hr style="border: solid black 2px;">
+                </div>
+                <form action="">
+                    <div id="addndel">
+                        <input id="add" class="btn" type="submit" value="등록">
+                    </div>
+                    <div id="subbox">
+
+                        <div id="infobox">
+                            <div>상품명<br> <input type="text "></div>
+                            <div>수량<br> <input type="text "></div>
+                            <div>금액<br>
+                                <input type="text ">
+                            </div>
+                            <div>사이즈
+                                <div class="sizebtn">
+                                    <label>S</label><input type="checkbox" />
+                                    <label>M</label><input type="checkbox" />
+                                    <label>L</label><input type="checkbox" />
+                                </div>
+                            </div>
+                            <div>색상
+                                <div class="colorbtn">
+                                    <input class="color" type="button" style="background-color: red;" /><input type="checkbox">
+                                    <input class="color" type="button" style="background-color: yellow;" /><input type="checkbox"><br>
+                                    <input class="color" type="button" style="background-color: green;" /><input type="checkbox">
+                                    <input class="color" type="button" style="background-color: blue;" /><input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="imgbox">제품이미지<br>
+                            <input type="file" name="" accept="image/*" value="1" onchange="previewImage(this, 'img1')" />
+                            <input type="file" name="" accept="image/*" value="2" onchange="previewImage(this, 'img2')" /> <br>
+                            <input type="file" name="" accept="image/*" value="3" onchange="previewImage(this, 'img3')" />
+                            <input type="file" name="" accept="image/*" value="4" onchange="previewImage(this, 'img4')" />
+                            <div class="imgsubbox">
+                                <div id="img1"></div>
+                                <div id="img2"></div>
+                                <div id="img3"></div>
+                                <div id="img4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.aside').load("admin_aside.html");
+    });
+</script>
+
+<script type="text/javascript " src="/js/admin_productadd.js"></script>
+
+</html>
