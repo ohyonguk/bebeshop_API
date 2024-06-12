@@ -37,6 +37,15 @@ public class ProductRepository {
     }
 
     /**
+     * Add list product.
+     *
+     * @param productV2List the product v 2 list
+     */
+    public void addListProduct(List<ProductV2> productV2List){
+        entityManager.persist(productV2List);
+    }
+
+    /**
      * Add product.
      *
      * @param productV2 the product v 2
@@ -47,15 +56,6 @@ public class ProductRepository {
         }else{
             entityManager.merge(productV2);
         }
-    }
-
-    /**
-     * Add list product.
-     *
-     * @param productV2List the product v 2 list
-     */
-    public void addListProduct(List<ProductV2> productV2List){
-        entityManager.persist(productV2List);
     }
 
     /**

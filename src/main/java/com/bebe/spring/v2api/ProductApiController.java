@@ -24,8 +24,8 @@ public class ProductApiController {
     private final ProductService productService;
 
     @PostMapping("/addOne")
-    public void addProduct(@RequestBody ProductV2 productV2){
-        productService.addProduct(productV2);
+    public void addProduct(@RequestBody ProductRequestDto productRequestDto){
+        productService.addProduct(productRequestDto);
     }
 
     @PostMapping("/find")

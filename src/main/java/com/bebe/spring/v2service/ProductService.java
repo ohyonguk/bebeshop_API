@@ -20,7 +20,8 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     @Transactional
-    public void addProduct(ProductV2 productV2){
+    public void addProduct(ProductRequestDto productRequestDto){
+        ProductV2 productV2 = new ProductV2(productRequestDto);
         productRepository.addProduct(productV2);
     }
 

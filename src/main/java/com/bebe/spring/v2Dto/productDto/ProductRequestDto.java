@@ -11,8 +11,13 @@ public class ProductRequestDto {
     private Long productNo;
     private String categoryNo;
     private String productName;
-    private Long offset;
-    private Long limit;
+    private Integer productCnt;
+    private Long productPrice;
+    private String productImg1;
+    private String productImg2;
+    private String productImg3;
+    private Integer offset;
+    private Integer limit;
     public ProductRequestDto() {
     }
     @QueryProjection

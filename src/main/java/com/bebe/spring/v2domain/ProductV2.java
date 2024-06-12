@@ -1,5 +1,6 @@
 package com.bebe.spring.v2domain;
 
+import com.bebe.spring.v2Dto.productDto.ProductRequestDto;
 import com.bebe.spring.v2Dto.productDto.ProductResponseDto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -34,6 +35,16 @@ public class ProductV2 extends Common{
     private List<ReviewV2> reviewList;
 
     public ProductV2() {
+    }
+
+    public ProductV2(ProductRequestDto productRequestDto) {
+        this.categoryNo = productRequestDto.getCategoryNo();
+        this.productImg1 = productRequestDto.getProductImg1();
+        this.productImg2 = productRequestDto.getProductImg2();
+        this.productImg3 = productRequestDto.getProductImg3();
+        this.productPrice = productRequestDto.getProductPrice();
+        this.productName = productRequestDto.getProductName();
+        this.productCnt = productRequestDto.getProductCnt();
     }
 
     public ProductV2(ProductResponseDto productResponseDto, int cnt, String orderStat) {
