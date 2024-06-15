@@ -144,4 +144,8 @@ public class ProductRepository {
     private BooleanBuilder nameEq(String productName) {
         return productName != null ? new BooleanBuilder(productV2.productName.like("%"+productName+"%")) : new BooleanBuilder();
     }
+
+    public void deleteProduct(ProductRequestDto productRequestDto) {
+
+    }
 }

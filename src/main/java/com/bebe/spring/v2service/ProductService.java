@@ -30,6 +30,11 @@ public class ProductService {
         productRepository.addListProduct(productV2List);
     }
 
+    @Transactional
+    public void deleteProduct(ProductRequestDto productRequestDto){
+        productRepository.deleteProduct(productRequestDto);
+    }
+
     public List<ProductV2> findProductList(ProductRequestDto productRequestDto){
         return  productRepository.findProductList(productRequestDto);
     }
