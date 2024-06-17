@@ -62,8 +62,6 @@ public class ProductService {
 
     @Transactional
     public void deleteProductList(ProductRequestDto productRequestDto) {
-        for(Long productNo : productRequestDto.getProductNoList()){
-
-        }
+       productRepository.deleteProduct(productRequestDto);
     }
 }

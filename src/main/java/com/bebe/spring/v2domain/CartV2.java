@@ -25,7 +25,7 @@ public class CartV2 extends Common{
     private Long count;
 
     private Character dispYn;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.REMOVE,orphanRemoval = true)
     @JoinColumn(name = "product_no")
     private ProductV2 product = new ProductV2();
 

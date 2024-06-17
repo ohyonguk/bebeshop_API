@@ -3,9 +3,7 @@ package com.bebe.spring.v2repository.product;
 import com.bebe.spring.v2Dto.productDto.ProductRequestDto;
 import com.bebe.spring.v2Dto.productDto.ProductResponseDto;
 import com.bebe.spring.v2Dto.productDto.QProductResponseDto;
-import com.bebe.spring.v2domain.ProductV2;
-import com.bebe.spring.v2domain.QReviewV2;
-import com.bebe.spring.v2domain.ReviewV2;
+import com.bebe.spring.v2domain.*;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
@@ -146,6 +144,15 @@ public class ProductRepository {
     }
 
     public void deleteProduct(ProductRequestDto productRequestDto) {
+        jpaQueryFactory.delete(QCartV2.cartV2)
+                .where(QCartV2.cartV2.product.productNo.in(productRequestDto.getProductNoList()))
+                .execute();
+        jpaQueryFactory.delete(productV2)
+               .where(productV2.productNo.in(productRequestDto.getProductNoList()))
+               .execute();
+
+        entityManager.flush();
+        entityManager.clear();
 
     }
 }

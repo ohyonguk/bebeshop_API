@@ -31,7 +31,7 @@ public class ProductV2 extends Common{
 
     private Integer productCnt;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private List<ReviewV2> reviewList;
 
     public ProductV2() {

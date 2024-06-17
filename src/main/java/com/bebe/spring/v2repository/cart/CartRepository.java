@@ -4,6 +4,7 @@ import com.bebe.spring.v2Dto.cartDto.CartRequestDto;
 import com.bebe.spring.v2Dto.cartDto.CartResponseDto;
 import com.bebe.spring.v2Dto.cartDto.QCartResponseDto;
 import com.bebe.spring.v2domain.CartV2;
+import com.bebe.spring.v2domain.QProductV2;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQueryFactory;
