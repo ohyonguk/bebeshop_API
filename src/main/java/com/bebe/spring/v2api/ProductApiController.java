@@ -43,9 +43,19 @@ public class ProductApiController {
     @PostMapping("/productCntList")
     public ResponseEntity<Boolean> productCntList(@RequestBody CartRequestDto cartRequestDto){
         boolean cntChk = productService.productCntList(cartRequestDto);
-
-
         return ResponseEntity.ok().body(cntChk);
+    }
+    @PostMapping("/deleteProductList")
+    public ResponseEntity<Boolean> deleteProductList(@RequestBody ProductRequestDto productRequestDto){
+        boolean success = false;
+        try{
+            productService.deleteProductList(productRequestDto);
+            success = true;
+        }catch (Exception e){
+            log.debug(e.getMessage());
+        }
+
+        return ResponseEntity.ok().body(success);
     }
 
 }

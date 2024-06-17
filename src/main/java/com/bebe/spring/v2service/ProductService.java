@@ -59,4 +59,11 @@ public class ProductService {
         return true;
 
     }
+
+    @Transactional
+    public void deleteProductList(ProductRequestDto productRequestDto) {
+        for(Long productNo : productRequestDto.getProductNoList()){
+
+        }
+    }
 }
